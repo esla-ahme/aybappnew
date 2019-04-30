@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Donation"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/donationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:layout_margin="16dp"
+        android:hint="الأسم"
+        />
+
+    <EditText
+        android:id="@+id/donationNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:layout_margin="16dp"
+        android:inputType="phone"
+        android:hint="رقم المحمول"
+        />
+    <EditText
+        android:id="@+id/donationAdress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:layout_margin="16dp"
+        android:inputType="phone"
+        android:hint="العنوان"
+        />
+
+   <RadioGroup
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="16dp"
+       android:orientation="horizontal"
+       >
+       <RadioButton
+           android:onClick="money"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="ساعد بالمال"
+           />
+       <RadioButton
+           android:onClick="matrials"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="ساعد بمواد"
+           />
+
+   </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="إرسال"
+        android:onClick="donation"/>
+
+
+</LinearLayout>

@@ -29,9 +29,7 @@ public class postsAdmin extends AppCompatActivity {
     private adapter adapter;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
-    DataSnapshot dataSnapshotTemp;
-    String stringTemp;
-    int intTemp=0;
+
     Vibrator vibe;
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -126,4 +124,9 @@ public class postsAdmin extends AppCompatActivity {
         Intent myIntent = new Intent(postsAdmin.this, posts.class);
         postsAdmin.this.startActivity(myIntent);
             }
+
+    public void donationMessages(View view) {
+        Intent myIntent = new Intent(postsAdmin.this, donationAdmin.class);
+        postsAdmin.this.startActivity(myIntent);
+    }
 }

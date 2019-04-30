@@ -37,8 +37,8 @@ public class PostActivity extends AppCompatActivity {
 
     private EditText post,content;
 
-    FirebaseDatabase mDatabase ;
-    DatabaseReference myRef ;
+    private FirebaseDatabase mDatabase ;
+    private DatabaseReference myRef ;
     private StorageReference mSref;
     private ProgressDialog sProgress;
     private Button btn;
@@ -104,7 +104,7 @@ public class PostActivity extends AppCompatActivity {
                                     Map<String, String> map2 = new HashMap<>();
                                     String spost = post.getText().toString();
                                     String scontent = content.getText().toString();
-                                    for( int i =0 ; i < 5 ; i++ ) {
+                                    for( int i =0 ; i < 1; i++ ) {
                                         map2.put("content", scontent);
                                         map2.put("post", spost + Integer.toString(i));
                                         map2.put("photo", uri.toString());

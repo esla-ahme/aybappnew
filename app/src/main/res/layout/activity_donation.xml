@@ -12,7 +12,7 @@
         android:padding="24dp"
         android:textSize="16sp"
         />
-    <TextView
+    <EditText
         android:id="@+id/donationName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         android:padding="8dp"
         android:textColor="#000"
         android:layout_margin="16dp"
-        android:inputType="phone"
+
         android:hint="العنوان"
         />
 

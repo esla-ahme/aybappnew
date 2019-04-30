@@ -5,6 +5,33 @@ public class model {
     private String post;
     private String content;
     private String image;
+    private String address;
+    private String name;
+    private String phone;
+    private String type;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public model(String address, String name, String phone, String type) {
+        this.address = address;
+        this.name = name;
+        this.phone = phone;
+        this.type = type;
+    }
 
     public model(String post, String content, String image) {
         this.post = post;

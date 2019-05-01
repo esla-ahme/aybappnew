@@ -21,11 +21,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="getPOSTS"
+        android:text="goto posts"
+
         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="donationMessages"
+        android:text="goto donation messages"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gotoMessages"
+        android:text="goto messages"
+
         />
 
     <ListView

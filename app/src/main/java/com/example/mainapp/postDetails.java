@@ -91,5 +91,7 @@ public class postDetails extends AppCompatActivity {
 
 
     public void goToContactUs(View view) {
+        Intent myIntent = new Intent(postDetails.this, ContactUS.class);
+       postDetails.this.startActivity(myIntent);
     }
 }

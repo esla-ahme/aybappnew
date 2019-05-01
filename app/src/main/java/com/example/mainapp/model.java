@@ -10,6 +10,8 @@ public class model {
     private String phone;
     private String type;
 
+
+
     public String getAddress() {
         return address;
     }
@@ -38,10 +40,17 @@ public class model {
         this.content = content;
         this.image = image;
     }
+
+
+
     public model(String post, String image) {
         this.post = post;
         this.image = image;
     }
+
+
+
+
 
     public String getPost() {
         return post;

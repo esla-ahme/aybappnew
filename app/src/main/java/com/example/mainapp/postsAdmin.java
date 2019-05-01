@@ -18,6 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public class postsAdmin extends AppCompatActivity {
     private adapter adapter;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
-
+    private FirebaseMessaging fbm;
     Vibrator vibe;
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -39,7 +40,8 @@ public class postsAdmin extends AppCompatActivity {
          vibe = (Vibrator) postsAdmin.this.getSystemService(Context.VIBRATOR_SERVICE);
 
         listView = findViewById(R.id.listview);
-
+        fbm = FirebaseMessaging.getInstance();
+        fbm.setAutoInitEnabled(true);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Posts");
         arrayList = new ArrayList<>();
@@ -127,6 +129,11 @@ public class postsAdmin extends AppCompatActivity {
 
     public void donationMessages(View view) {
         Intent myIntent = new Intent(postsAdmin.this, donationAdmin.class);
+        postsAdmin.this.startActivity(myIntent);
+    }
+
+    public void gotoMessages(View view) {
+        Intent myIntent = new Intent(postsAdmin.this, messagesAdmin.class);
         postsAdmin.this.startActivity(myIntent);
     }
 }

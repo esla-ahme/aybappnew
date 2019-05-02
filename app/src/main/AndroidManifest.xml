@@ -11,10 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".NavigationDrawer"
-            android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity android:name=".messagesAdmin" />
         <activity android:name=".ContactUS" />
         <activity android:name=".donationAdmin" />
@@ -22,7 +19,9 @@
         <activity android:name=".postDetails" />
         <activity android:name=".posts" />
         <activity android:name=".PostActivity" />
-        <activity android:name=".postsAdmin">
+        <activity android:name=".postsAdmin"></activity>
+        <activity android:name=".UserInterface"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

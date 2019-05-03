@@ -90,8 +90,8 @@ public class postDetails extends AppCompatActivity {
     }
 
 
-   /* public void goToContactUs(View view) {
+    public void goToContactUs(View view) {
         Intent myIntent = new Intent(getApplicationContext(), contactUsFragment.class);
         startActivity(myIntent);
-    }*/
+    }
 }

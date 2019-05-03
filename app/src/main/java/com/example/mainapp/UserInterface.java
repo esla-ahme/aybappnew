@@ -1,5 +1,6 @@
 package com.example.mainapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -62,9 +63,10 @@ public class UserInterface extends AppCompatActivity implements NavigationView.O
                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                        new aboutFragment()).commit();
                break;
-           /* case R.id.nav_send:
-                Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
-                break;*/
+            case R.id.menuLogin:
+                Intent myIntent = new Intent(getApplicationContext(), loginActivity.class);
+                startActivity(myIntent);
+                break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

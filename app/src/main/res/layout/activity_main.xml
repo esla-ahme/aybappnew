@@ -17,13 +17,7 @@
         android:onClick="addPost"
         android:fontFamily="serif-monospace"
         />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="getPOSTS"
-        android:text="goto posts"
 
-        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

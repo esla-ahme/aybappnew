@@ -44,7 +44,7 @@ public class postDetails extends AppCompatActivity {
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                String k = posts.KEY;
+                String k = homeFragment.KEY;
                 if (k == dataSnapshot.getKey()){
                 String photos = dataSnapshot.child("photo").getValue().toString();
                 String posts = dataSnapshot.child("post").getValue().toString();
@@ -90,8 +90,8 @@ public class postDetails extends AppCompatActivity {
     }
 
 
-    public void goToContactUs(View view) {
-        Intent myIntent = new Intent(postDetails.this, ContactUS.class);
-       postDetails.this.startActivity(myIntent);
-    }
+   /* public void goToContactUs(View view) {
+        Intent myIntent = new Intent(getApplicationContext(), contactUsFragment.class);
+        startActivity(myIntent);
+    }*/
 }

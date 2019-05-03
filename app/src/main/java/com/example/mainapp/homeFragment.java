@@ -1,11 +1,16 @@
-/*package com.example.mainapp;
+package com.example.mainapp;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -16,8 +21,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
-public class posts extends AppCompatActivity {
+public class homeFragment extends Fragment {
+    protected FragmentActivity mActivity;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        if (context instanceof Activity){
+            mActivity = (FragmentActivity) context;
+        }
+    }
 
     private ListView listViewUser;
     private FirebaseDatabase database;
@@ -26,18 +42,20 @@ public class posts extends AppCompatActivity {
     private adapter adapter;
     private ArrayList<String> arrayListKeys;
     public static String  KEY;
+
+    @Nullable
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragmen_home);
-   listViewUser = findViewById(R.id.listviewuser);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragmen_home,container,false);
+        listViewUser = view.findViewById(R.id.listviewuser);
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Posts");
 
         arrayList = new ArrayList<>();
         arrayListKeys = new ArrayList<>();
-        adapter = new adapter(getApplicationContext(),0,arrayList);
+        adapter = new adapter(mActivity,0,arrayList);
         listViewUser.setAdapter(adapter);
         listViewUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -85,14 +103,11 @@ public class posts extends AppCompatActivity {
             }
         });
 
+        return view;
 
     }
-
     public void openItem() {
-        Intent myIntent = new Intent(posts.this, postDetails.class);
-        posts.this.startActivity(myIntent);
+        Intent myIntent = new Intent(mActivity, postDetails.class);
+        mActivity.startActivity(myIntent);
     }
-
-
-
-}*/
+}

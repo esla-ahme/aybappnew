@@ -122,10 +122,6 @@ public class postsAdmin extends AppCompatActivity {
         Intent myIntent = new Intent(postsAdmin.this, PostActivity.class);
         postsAdmin.this.startActivity(myIntent);
     }
-    public void getPOSTS(View view) {
-        Intent myIntent = new Intent(postsAdmin.this, posts.class);
-        postsAdmin.this.startActivity(myIntent);
-            }
 
     public void donationMessages(View view) {
         Intent myIntent = new Intent(postsAdmin.this, donationAdmin.class);
